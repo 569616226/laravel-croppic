@@ -1,27 +1,22 @@
-## Laravel PHP Framework
+# Upload and edit image using Croppic jQuery plugin and Laravel
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+This project is related to tutorial from [Codingo Tuts].
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+In this tutorial I covered creating image upload/edit widget, which is ideal for profile photo manipulations. It works in similar way as Facebook, Twitter or Linkedin profile photo widgets.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+### Croppic works in following way:
 
-## Official Documentation
+  - when you select image from browse window it will be uploaded to server, in original form
+  - server responds with url to newly uploaded image and Croppic renders it
+  - user can slide image, zoom-in, zoom-out and after he clicks crop button data is sent to server
+  - server receives url of original image, and cropping details like: x-position, y-position, cropped width, cropped height, angle.
+  - after server processes image using cropping details, it sends success response to client
+  - if any errors occur, alert dialog is displayed with error message
+  - after successful cropping, final image is displayed to user in Croppic box
+  - user can click X and start process all over again
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+### Croppic in the action
 
-## Contributing
+![alt text](http://d356v2gvfldw6z.cloudfront.net/wp-content/uploads/2015/12/croppic.png "Croppic in the action")
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+[Codingo Tuts]:http://tuts.codingo.me/upload-and-edit-image-using-croppic-jquery-plugin/
